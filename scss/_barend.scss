@@ -5,10 +5,10 @@ $primary-yellow: #F2CE25;
 $primary-red: #BA1610;
 
 * {
-  background: radial-gradient($primary-blue, $secondary-blue);
+  background-image:url("../mehdi/IMG/arenaarena.jpg");
 }
 
-#pc-deck {
+.card-deck {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -33,7 +33,7 @@ $primary-red: #BA1610;
   width: 75%;
 }
 
-#battle-arena h1 {
+h1 {
   color: $primary-yellow;
   display: flex;
   justify-content: center;
@@ -45,7 +45,7 @@ $primary-red: #BA1610;
 #pc-card-choice {
   max-width: 7rem;
 }
-#battle-arena p {
+p {
   color: $primary-yellow;
   display: flex;
   justify-content: center;
@@ -53,12 +53,6 @@ $primary-red: #BA1610;
 }
 
 #middle-cards {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-#player-deck {
   display: flex;
   justify-content: center;
   align-content: center;

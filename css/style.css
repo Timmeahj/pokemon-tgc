@@ -4,9 +4,9 @@
 /* Mouad scss */
 /* Barend scss */
 * {
-  background: radial-gradient(#33A2FB, #54C3FD); }
+  background-image: url("../mehdi/IMG/arenaarena.jpg"); }
 
-#pc-deck {
+.card-deck {
   display: flex;
   justify-content: center;
   align-content: center; }
@@ -30,7 +30,7 @@
 #pc-progress-bar {
   width: 75%; }
 
-#battle-arena h1 {
+h1 {
   color: #F2CE25;
   display: flex;
   justify-content: center;
@@ -42,18 +42,13 @@
 #pc-card-choice {
   max-width: 7rem; }
 
-#battle-arena p {
+p {
   color: #F2CE25;
   display: flex;
   justify-content: center;
   align-content: center; }
 
 #middle-cards {
-  display: flex;
-  justify-content: center;
-  align-content: center; }
-
-#player-deck {
   display: flex;
   justify-content: center;
   align-content: center; }
