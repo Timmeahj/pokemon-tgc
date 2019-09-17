@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Righteous&display=swap');
+
+body {
+    margin: 0 auto;
+    width:100%;
+    height:750px;
+    background: #d4fc79; background: -moz-linear-gradient(to top,  #d4fc79 0%,#96e6a1 100%); background: -webkit-linear-gradient(to top,  #d4fc79 0%,#96e6a1 100%); background: linear-gradient(to top,  #d4fc79 0%,#96e6a1 100%);
+    background-image: url("IMG/background-fade.png");
+    background-repeat: no-repeat;
+    background-position: right 0px bottom -190px;
+    font-family: 'Righteous', cursive;
+    position:relative;
+    overflow:hidden;
+    z-index:-1;
+}
+
+#right-container {
+    width:380px;
+    height:605px;
+    background-color: black;
+    border-radius:25px 0  0 25px;
+    opacity:0.6;
+    position:absolute;
+    top:10px;
+    right: 0px;
+    border-right: 10px solid white;
+
+}
+
+#left-container {
+    width:380px;
+    height:605px;
+    background-color: black;
+    border-radius:0 25px  25px 0;
+    opacity:0.6;
+    position:absolute;
+    top:10px;
+    border-left: 10px solid red;
+}
+
+
+#arena {
+    top:50px;
+    position:absolute;
+    left:425px;
+    z-index:1;
+    opacity:0.4;
+}
+
+#poke-arena {
+    transform: rotate(90deg);
+}
