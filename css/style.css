@@ -4,7 +4,8 @@
 /* Mouad scss */
 /* Barend scss */
 * {
-  background-image: url("../mehdi/IMG/arenaarena.jpg"); }
+  background-image: url("../mehdi/IMG/arenaarena.jpg");
+  background-size: cover; }
 
 .card-deck {
   display: flex;
