@@ -40,24 +40,33 @@ allCards(function () {
     var pcHand = Array.from(document.getElementById("pc-cards").getElementsByClassName("card"));
 
     //console.log(humanHand[2].innerHTML, humanCards);
+    var attack;
+    var hp;
+    var name;
+    var type;
+
+    var pcCard = deck2[Math.floor(Math.random() * deck2.length)];
+    var pcAttack;
+    var pcHp;
+    var pcName;
+    var pcType;
+
+    var combat;
 
     for(var i = 0; i < handSize; i++){
         var imageUrlHuman = humanCards[i].card.imageUrl;
         var imageUrlPc = pcCards[i].card.imageUrl;
 
-        var attack;
-        var hp;
-        var name;
-        var type;
         //console.log(imageUrlHuman, humanHand[i].firstChild);
 
         humanHand[i].innerHTML = '<img class="card-img-top" src="'+imageUrlHuman+'" alt="Card image cap">';
         console.log(humanCards[i]);
 
         humanHand[i].addEventListener("click", function() {
+            document.getElementById("clickZone").classList.remove("doClick");
 
             if(this == humanHand[0]){
-                attack = humanCards[0].card.attacks;
+                attack = /*humanCards[0].card.attacks*/30;
                 hp = humanCards[0].card.hp;
                 name = humanCards[0].card.name;
                 type = humanCards[0].card.types;
@@ -66,7 +75,7 @@ allCards(function () {
             }
 
             if(this == humanHand[1]){
-                attack = humanCards[1].card.attacks;
+                attack = /*humanCards[1].card.attacks*/30;
                 hp = humanCards[1].card.hp;
                 name = humanCards[1].card.name;
                 type = humanCards[1].card.types;
@@ -75,16 +84,16 @@ allCards(function () {
             }
 
             if(this == humanHand[2]){
-                attack = humanCards[2].card.attacks;
+                attack = /*humanCards[2].card.attacks*/30;
                 hp = humanCards[2].card.hp;
                 name = humanCards[2].card.name;
                 type = humanCards[2].card.types;
                 id = humanCards[2].card.nationalPokedexNumber;
                 console.log(name);
             }
-
+        
             if(this == humanHand[3]){
-                attack = humanCards[3].card.attacks;
+                attack = /*humanCards[3].card.attacks*/30;
                 hp = humanCards[3].card.hp;
                 name = humanCards[3].card.name;
                 type = humanCards[3].card.types;
@@ -93,7 +102,7 @@ allCards(function () {
             }
 
             if(this == humanHand[4]){
-                attack = humanCards[4].card.attacks;
+                attack = /*humanCards[4].card.attacks*/30;
                 hp = humanCards[4].card.hp;
                 name = humanCards[4].card.name;
                 type = humanCards[4].card.types;
@@ -101,6 +110,7 @@ allCards(function () {
                 console.log(name);
             }
 
+            //console.log(name);
             fetch("https://pokeapi.co/api/v2/pokemon/" + id)
                 .then(function(response) {
                     return response.json();
@@ -111,6 +121,30 @@ allCards(function () {
                     document.getElementById("player-card-choice-img").src = picture;
 
                 })
+
+            pcAttack = /*pcCard.card.attacks*/20;
+            pcHp = pcCard.card.hp;
+            pcName = pcCard.card.name;
+            pcType = pcCard.card.types;
+
+            console.log(pcName, hp, pcHp);
+
+            combat = setInterval(function(){ 
+                pcHp = pcHp-attack;
+                hp = hp-pcAttack; 
+                if(pcHp <= 0){
+                    pcCard = deck2[Math.floor(Math.random() * deck2.length)];
+                    pcAttack = /*pcCard.card.attacks*/20;
+                    pcHp = pcCard.card.hp;
+                    pcName = pcCard.card.name;
+                    pcType = pcCard.card.types;
+                }
+                if(hp <= 0){
+                    clearInterval(combat);
+                    document.getElementById("clickZone").classList.add("doClick");
+                }
+                console.log(hp, pcHp, pcName);  
+            }, 2000);           
         });
     }
 
