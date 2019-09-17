@@ -71,4 +71,7 @@ p {
   background: #BA1610;
   color: #F2CE25; }
 
+.imgflip {
+  transform: rotateY(180deg); }
+
 /*# sourceMappingURL=style.css.map */

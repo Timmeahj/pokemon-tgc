@@ -3,6 +3,7 @@ $primary-blue: #33A2FB;
 $secondary-blue: #54C3FD;
 $primary-yellow: #F2CE25;
 $primary-red: #BA1610;
+$secondary-red: #F70325;
 
 * {
   background: radial-gradient($primary-blue, $secondary-blue);
@@ -74,4 +75,7 @@ p {
 #player-hp {
   background: $primary-red;
   color: $primary-yellow;
+}
+.imgflip{
+  transform:rotateY(180deg);
 }
