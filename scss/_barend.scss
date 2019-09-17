@@ -1,2 +1,51 @@
 /* Barend scss */
+$primary-blue: #05075D;
+$secondary-blue: #444ABA;
+$primary-yellow: #F2CE25;
+$primary-red: #BA1610;
 
+* {
+  background: radial-gradient($primary-blue, $secondary-blue);
+}
+
+#pc-deck {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#pc-cards {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#pc-hp {
+  background: $primary-red;
+  color: $primary-yellow;
+}
+
+#battle-arena h1 {
+  color: $primary-yellow;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#middle-cards {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#player-deck {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#player-cards {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#player-hp {
+  background: $primary-red;
+  color: $primary-yellow;
+}

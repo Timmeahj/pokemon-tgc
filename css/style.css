@@ -1,0 +1,48 @@
+/* Tim scss */
+/* Robin scss */
+/* Mehdi scss */
+/* Mouad scss */
+/* Barend scss */
+* {
+  background: radial-gradient(#05075D, #444ABA); }
+
+#pc-deck {
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+#pc-cards {
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+#pc-hp {
+  background: #BA1610;
+  color: #F2CE25; }
+
+#battle-arena h1 {
+  color: #F2CE25;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+#middle-cards {
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+#player-deck {
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+#player-cards {
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+#player-hp {
+  background: #BA1610;
+  color: #F2CE25; }
+
+/*# sourceMappingURL=style.css.map */
