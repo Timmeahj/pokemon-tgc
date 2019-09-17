@@ -13,14 +13,36 @@ $primary-red: #BA1610;
   justify-content: center;
   align-content: center;
 }
+#pc-card-deck{
+  max-width: 7rem;
+}
 #pc-cards {
   display: flex;
   justify-content: center;
   align-content: center;
 }
+#pc-card-one {
+  max-width: 7rem;
+}
+#pc-card-two {
+  max-width: 7rem;
+}
+#pc-card-three {
+  max-width: 7rem;
+}
+#pc-card-four {
+  max-width: 7rem;
+}
+#pc-card-five {
+  max-width: 7rem;
+}
 #pc-hp {
   background: $primary-red;
   color: $primary-yellow;
+  max-width: 50%;
+}
+#pc-progress-bar {
+  width: 75%;
 }
 
 #battle-arena h1 {
@@ -29,6 +51,19 @@ $primary-red: #BA1610;
   justify-content: center;
   align-content: center;
 }
+#player-card-choice {
+  max-width: 7rem;
+}
+#pc-card-choice {
+  max-width: 7rem;
+}
+#battle-arena p {
+  color: $primary-yellow;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 #middle-cards {
   display: flex;
   justify-content: center;
@@ -40,10 +75,34 @@ $primary-red: #BA1610;
   justify-content: center;
   align-content: center;
 }
+#player-card-deck {
+  max-width: 7rem;
+}
+#player-hp {
+  max-width: 50%;
+}
 #player-cards {
   display: flex;
   justify-content: center;
   align-content: center;
+}
+#player-card-one {
+  max-width: 7rem;
+}
+#player-card-two {
+  max-width: 7rem;
+}
+#player-card-three {
+  max-width: 7rem;
+}
+#player-card-four {
+  max-width: 7rem;
+}
+#player-card-five {
+  max-width: 7rem;
+}
+#player-progress-bar {
+  width: 58%;
 }
 #player-hp {
   background: $primary-red;
