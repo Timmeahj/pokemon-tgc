@@ -37,15 +37,35 @@ body {
 #arena {
     bottom: 140px;
     position:absolute;
-    left:425px;
-    z-index:0;
-    opacity:0.6;
+    left:420px;
+    top:70px;
+
+
 }
 
 #poke-arena {
     transform: rotate(90deg);
+    position:absolute;
+    z-index:0;
+
+}
+#player-choice {
+    position:absolute;
+    z-index:1;
+    left:80px;
+    top:150px;
+    width:150px;
+    height:200px;
 }
 
+#computer-choice {
+    position: absolute;
+    z-index: 1;
+    left: 283px;
+    top:150px;
+    width:150px;
+    height:200px;
+}
 #player-deck {
     position:absolute;
     width:190px;
@@ -70,17 +90,8 @@ border:2px solid rgba(255,255,255,0.6);
 
 }
 
-#pc-one {
 
-    width:150px;
-    height:180px;
-    left: 30px;
-    position:absolute;
-  top:10px;
-
-
-}
-#pc-two {
+#team-rocket {
 
     width:150px;
     height:180px;
@@ -90,36 +101,9 @@ border:2px solid rgba(255,255,255,0.6);
 
 
 }
-#pc-three {
-
-    width:150px;
-    height:180px;
-    left: 30px;
-    position:absolute;
-    top:205px;
 
 
-}
-#pc-four {
 
-    width:150px;
-    height:180px;
-    right: 30px;
-    position:absolute;
-    top:205px;
-
-
-}
-#pc-five {
-
-    width:150px;
-    height:180px;
-    right: 30px;
-    position:absolute;
-    bottom:50px;
-
-
-}
 
 #back-one {
     width:150px;
@@ -168,4 +152,54 @@ border:2px solid rgba(255,255,255,0.6);
     top:30px;
     right:30px;
 }
+
+#player-one {
+
+    width:150px;
+    height:180px;
+    right: 30px;
+    position:absolute;
+    top:10px;
+
+
+}
+#player-two {
+
+    width:150px;
+    height:180px;
+    left: 30px;
+    position:absolute;
+    top:10px;
+
+
+}
+#player-three {
+
+    width:150px;
+    height:180px;
+    right: 30px;
+    position:absolute;
+    top:205px;
+
+
+}
+#player-four {
+
+    width:150px;
+    height:180px;
+    left: 30px;
+    position:absolute;
+    top:205px;
+
+
+}
+#player-five {
+    width:150px;
+    height:180px;
+    left: 30px;
+    position:absolute;
+    bottom:50px;
+}
+
+
 
