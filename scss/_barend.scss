@@ -5,79 +5,112 @@ $primary-yellow: #F2CE25;
 $primary-red: #BA1610;
 $secondary-red: #F70325;
 
-* {
-  background: radial-gradient($primary-blue, $secondary-blue);
+*{
+  border: none!important;
+}
+
+p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#player-card-choice, #pc-card-choice{
+  background: rgba(0,0,0,0)!important;
+}
+
+body{
+  background: radial-gradient(#33A2FB, #54C3FD); 
 }
 
 .card-deck {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-content: center; 
 }
-#pc-card-deck{
-  max-width: 7rem;
+
+#pc-card-deck {
+  max-width: 7rem; 
 }
+
 #pc-cards {
   display: flex;
   justify-content: center;
-  align-content: center;
-}
-.card {
-  max-width: 7rem;
-}
-#pc-hp {
-  background: $primary-red;
-  color: $primary-yellow;
-  max-width: 50%;
-}
-#pc-progress-bar {
-  width: 75%;
+  align-content: center; 
 }
 
-h1 {
-  color: $primary-yellow;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+.card {
+  max-width: 11rem; 
 }
+
+.stats{
+  width: 100px;
+}
+
+.pokeHp{
+  height: 20px;
+  color: white;
+  background: red;
+  width: 100%;
+}
+
+.pokeHp2{
+  height: 20px;
+}
+
+.playerHp{
+  height: 40px;
+  font-size: 1.3em;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+
+#pc-progress-bar {
+  background: red;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+}
+
+#player-progress-bar {
+  height: 40px;
+  background: red;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+}
+
+
 #player-card-choice {
-  max-width: 7rem;
+  max-width: 7rem; 
 }
+
 #pc-card-choice {
-  max-width: 7rem;
-}
-p {
-  color: $primary-yellow;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  max-width: 7rem; 
 }
 
 #middle-cards {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-content: center; 
 }
+
 #player-card-deck {
-  max-width: 7rem;
+  max-width: 7rem; 
 }
-#player-hp {
-  max-width: 50%;
-}
+
 #player-cards {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-content: center; 
 }
-#player-progress-bar {
-  width: 58%;
-}
+
 #player-hp {
-  background: $primary-red;
-  color: $primary-yellow;
+  color: black; 
 }
-.imgflip{
-  transform:rotateY(180deg);
+
+.imgflip {
+  transform: rotateY(180deg); 
 }
 
 .noClick{
@@ -91,6 +124,24 @@ p {
   z-index: 10000;
 }
 
+.stats{
+  font-weight: bold;
+  color: white;
+}
+
+#versus{
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 110px;
+}
+
 .doClick{
   display: none;
 }
+
+section{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+

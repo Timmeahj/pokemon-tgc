@@ -17,21 +17,10 @@
 
     <section class="container" id="header">
 
-        <!-- Card Deck -->
-
-        <div class="card-deck" id="pc-deck">
-            <div class="card" id="pc-card-deck">
-                <!-- <div class="card-header bg-transparent" id="pc-card-one-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="pc-deck-one-img">
-                <!-- <div class="card-footer bg-transparent" id="pc-card-one-att">ATT: 352</div> -->
-            </div>
-        </div>
-
         <!-- HP -->
 
-        <div class="progress" id="pc-hp">
-            <label for="pc-hp">Computer HP</label>
-            <div class="progress-bar" id="pc-progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress playerHp" id="pc-hp">
+            <div class="progress-bar" id="pc-progress-bar" role="progressbar">Enemy HP</div>
         </div>
 
         <!-- Cards -->
@@ -70,25 +59,35 @@
 
     <section class="container" id="battle-arena">
 
-        <h1>Pokemon Battle</h1>
-
         <div class="card-deck" id="middle-cards">
+            <div class="stats gone" id="humanStats">
+                <div class="pokeHp progress" id="poke-hp">
+                    <div class="progress-bar pokeHp2" id="pc-progress-bar" role="progressbar"><span id="humanHp"></span> HP</div>
+                </div>
+                <p id="attackStat">Atk: <span id="humanAtk"></span></p>
+                <p id="typeStat">Type: <span id="humanType"></span></p>
+            </div>
             <div class="card" id="player-card-choice">
                 <!-- <div class="card-header bg-transparent" id="player-card-choice-hp">HP: 58</div> -->
                 <img class="card-img-top imgflip" src="./img/ball.png" alt="Card image cap" id="player-card-choice-img">
                 <!-- <div class="card-footer bg-transparent" id="player-card-choice-att">ATT: 352</div> -->
             </div>
 
-            <img src="./img/examples/vs.jpg" alt="Versus">
+            <div id="versus">VS</div>
 
             <div class="card" id="pc-card-choice">
                 <!-- <div class="card-header bg-transparent" id="pc-card-choice-hp">HP: 58</div> -->
                 <img class="card-img-top" src="./img/ball.png" alt="Card image cap" id="pc-card-choice-img">
                 <!-- <div class="card-footer bg-transparent" id="pc-card-choice-att">ATT: 352</div> -->
             </div>
+            <div class="stats gone" id="pcStats">
+                <div class="pokeHp progress" id="pc-poke-hp">
+                    <div class="progress-bar pokeHp2" id="pc-progress-bar" role="progressbar"><span id="pcHp"></span>HP</div>
+                </div>
+                <p id="attackStat">Atk: <span id="pcAtk"></span></p>
+                <p id="typeStat">Type: <span id="pcType"></span></p>
+            </div>
         </div>
-
-        <p>Arena</p>
 
     </section>
 
@@ -99,46 +98,35 @@
         <div class="card-deck" id="player-cards">
             <div class="card" id="player-card-one">
                 <!-- <div class="card-header bg-transparent" id="player-card-one-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/pokecard.jpg" alt="Card image cap" id="player-card-one-img">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="player-card-one-img">
                 <!-- <div class="card-footer bg-transparent" id="player-card-one-att">ATT: 352</div> -->
             </div>
             <div class="card" id="player-card-two">
                 <!-- <div class="card-header bg-transparent" id="player-card-two-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/pokecard.jpg" alt="Card image cap" id="player-card-two-img">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="player-card-two-img">
                 <!-- <div class="card-footer bg-transparent" id="player-card-two-att">ATT: 352</div> -->
             </div>
             <div class="card" id="player-card-three">
                 <!-- <div class="card-header bg-transparent" id="player-card-three-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/pokecard.jpg" alt="Card image cap" id="player-card-three-img">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="player-card-three-img">
                 <!-- <div class="card-footer bg-transparent" id="player-card-three-att">ATT: 352</div> -->
             </div>
             <div class="card" id="player-card-four">
                 <!-- <div class="card-header bg-transparent" id="player-card-four-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/pokecard.jpg" alt="Card image cap" id="player-card-four-img">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="player-card-four-img">
                 <!-- <div class="card-footer bg-transparent" id="player-card-four-att">ATT: 352</div> -->
             </div>
             <div class="card" id="player-card-five">
                 <!-- <div class="card-header bg-transparent" id="player-card-five-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/pokecard.jpg" alt="Card image cap" id="player-card-five-img">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="player-card-five-img">
                 <!-- <div class="card-footer bg-transparent" id="player-card-five-att">ATT: 352</div> -->
             </div>
         </div>
 
         <!-- HP -->
 
-        <div class="progress" id="player-hp">
-            <label for="player-hp">Player HP</label>
-            <div class="progress-bar" id="player-progress-bar" role="progressbar" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-
-        <!-- Card Deck -->
-
-        <div class="card-deck" id="player-deck">
-            <div class="card" id="player-card-deck">
-                <!-- <div class="card-header bg-transparent" id="player-card-one-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/pokecard.jpg" alt="Card image cap" id="player-deck-one-img">
-                <!-- <div class="card-footer bg-transparent" id="player-card-one-att">ATT: 352</div> -->
-            </div>
+        <div class="progress playerHp" id="player-hp">
+            <div class="progress-bar" id="player-progress-bar" role="progressbar">Your HP</div>
         </div>
 
     </section>
