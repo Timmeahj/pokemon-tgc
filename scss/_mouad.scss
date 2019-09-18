@@ -16,14 +16,19 @@ header img{
 
 .kaderDiv{
   margin-top: 1%;
-  background-image: linear-gradient(to bottom, #ffeb19, #ffda0c, #ffca05, #feb906, #fba90d);
+  background: red;
   border: blue 1px solid;
   height: 750px;
   margin-left: 10%;
   margin-right: 10%;
 }
 
-
+.sidebar{
+  height: 100%;
+  width: 75%;
+  background-color: blue;
+  border: 1px green solid;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -45,28 +50,11 @@ p{
 }
 .text-muted2{
   margin-left: 5%;
-  color: white;
 }
 
-.text-muted2:link {
+h5{
   color: white;
-}
-
-.text-muted2:visited {
-  color: white;
-}
-
-.text-muted2:hover {
-  color: white;
-}
-
-.text-muted2:active {
-  color: white;
-}
-
-#menuknop{
-  color: white;
-  font-size: 1.5rem;
+  font-size: 40px;
 }
 span{
   font-size: 20px;

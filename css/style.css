@@ -17,11 +17,17 @@ header img {
 
 .kaderDiv {
   margin-top: 1%;
-  background-image: linear-gradient(to bottom, #ffeb19, #ffda0c, #ffca05, #feb906, #fba90d);
+  background: red;
   border: blue 1px solid;
   height: 750px;
   margin-left: 10%;
   margin-right: 10%; }
+
+.sidebar {
+  height: 100%;
+  width: 75%;
+  background-color: blue;
+  border: 1px green solid; }
 
 ul {
   list-style-type: none;
@@ -38,39 +44,17 @@ p {
   padding-left: 15%;
   padding-right: 15%; }
 
-.text-muted {
-  color: white; }
-
 .text-muted2 {
-  margin-left: 5%;
-  color: white; }
+  margin-left: 5%; }
 
-.text-muted2:link {
-  color: white; }
-
-.text-muted2:visited {
-  color: white; }
-
-.text-muted2:hover {
-  color: white; }
-
-.text-muted2:active {
-  color: white; }
-
-#menuknop {
+h5 {
   color: white;
-  font-size: 1.5rem; }
+  font-size: 40px; }
 
 span {
   font-size: 20px;
   color: white; }
 
-.home {
-  max-height: 100%; }
-
-@media only screen and (max-width: 540px) {
-  p {
-    font-size: 0.5rem; } }
 /* Barend scss */
 * {
   border: none !important; }
@@ -104,33 +88,44 @@ body {
 .stats {
   width: 100px; }
 
-.pokeHp {
+.humanPokeHp {
   height: 20px;
   color: white;
-  background: red;
   width: 100%; }
 
-.pokeHp2 {
+.pcPokeHp {
+  height: 20px;
+  color: white;
+  width: 100%; }
+
+.humanPokeHp > div {
+  background: green; }
+
+.pcPokeHp > div {
+  background: red; }
+
+.pokeHpText {
   height: 20px; }
 
-.playerHp {
+.styleHp {
   height: 40px;
   font-size: 1.3em;
   margin-top: 25px;
   margin-bottom: 25px; }
 
-#pc-progress-bar {
-  background: red;
-  color: white;
-  font-weight: bold;
+#humanHp {
+  background: green;
   width: 100%; }
 
-#player-progress-bar {
-  height: 40px;
+#pcHp {
   background: red;
+  width: 100%; }
+
+.progress-bar {
   color: white;
   font-weight: bold;
-  width: 100%; }
+  width: 100%;
+  border-radius: 5px; }
 
 #player-card-choice {
   max-width: 7rem; }
@@ -183,5 +178,8 @@ body {
 section {
   margin-top: 50px;
   margin-bottom: 50px; }
+
+.gone {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

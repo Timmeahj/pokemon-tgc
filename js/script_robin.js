@@ -55,6 +55,8 @@ allCards(function () {
 
     var combat;
 
+    var count = 5;
+
     for(var i = 0; i < handSize; i++){
         var imageUrlHuman = humanCards[i].card.imageUrl;
         var imageUrlPc = pcCards[i].card.imageUrl;
@@ -66,11 +68,17 @@ allCards(function () {
 
         humanHand[i].addEventListener("click", function() {
             
-            var newCard = deck1[Math.floor(Math.random() * deck1.length)];
+            var newCard = deck1[count];
+            count++;
+            if(count == 29){
+                count = 0;
+            }
             var newCardImg = newCard.card.imageUrl;
             this.innerHTML = '<img class="card-img-top" src="'+newCardImg+'" alt="Card image cap">';
 
             document.getElementById("clickZone").classList.remove("doClick");
+            document.getElementById("humanStats").classList.remove("gone");
+            document.getElementById("pcStats").classList.remove("gone");
 
             if(this == humanHand[0]){
                 index = 0;
