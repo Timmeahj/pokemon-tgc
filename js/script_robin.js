@@ -29,8 +29,8 @@ allCards(function () {
 
     var shuffled = cards.sort(() => 0.5 - Math.random());
 
-    var deck1 = shuffled.slice(0, 20);
-    var deck2 = shuffled.slice(20, 40);
+    var deck1 = shuffled.slice(0, 30);
+    var deck2 = shuffled.slice(30, 60);
 
     var humanCards = deck1.slice(0,5);
     var pcCards = deck2.slice(0,5);
@@ -47,7 +47,7 @@ allCards(function () {
 
     var pcCard = deck2[Math.floor(Math.random() * deck2.length)];
     var pcAttack;
-    var pcHp;
+    var pcHp = pcCard.card.hp;
     var pcName;
     var pcType;
 
@@ -123,9 +123,18 @@ allCards(function () {
                 })
 
             pcAttack = /*pcCard.card.attacks*/20;
-            pcHp = pcCard.card.hp;
             pcName = pcCard.card.name;
             pcType = pcCard.card.types;
+            pcId = pcCard.card.nationalPokedexNumber;
+
+            fetch("https://pokeapi.co/api/v2/pokemon/" + pcId)
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(pokemon) {
+                    pcPicture = pokemon.sprites.front_default;
+                    document.getElementById("pc-card-choice-img").src = pcPicture;
+                })
 
             console.log(pcName, hp, pcHp);
 
@@ -133,15 +142,28 @@ allCards(function () {
                 pcHp = pcHp-attack;
                 hp = hp-pcAttack; 
                 if(pcHp <= 0){
-                    pcCard = deck2[Math.floor(Math.random() * deck2.length)];
-                    pcAttack = /*pcCard.card.attacks*/20;
-                    pcHp = pcCard.card.hp;
-                    pcName = pcCard.card.name;
-                    pcType = pcCard.card.types;
+                    document.getElementById("pc-card-choice-img").src = "./img/ball.png";
+                    setTimeout(function(){ 
+                        pcCard = deck2[Math.floor(Math.random() * deck2.length)];
+                        pcId = pcCard.card.nationalPokedexNumber;
+                        fetch("https://pokeapi.co/api/v2/pokemon/" + pcId)
+                            .then(function(response) {
+                                return response.json();
+                            })
+                            .then(function(pokemon) {
+                                pcPicture = pokemon.sprites.front_default;
+                                document.getElementById("pc-card-choice-img").src = pcPicture;
+                            })
+                        pcAttack = /*pcCard.card.attacks*/20;
+                        pcHp = pcCard.card.hp;
+                        pcName = pcCard.card.name;
+                        pcType = pcCard.card.types;
+                    }, 1000);
                 }
                 if(hp <= 0){
                     clearInterval(combat);
                     document.getElementById("clickZone").classList.add("doClick");
+                    document.getElementById("player-card-choice-img").src = "./img/ball.png";
                 }
                 console.log(hp, pcHp, pcName);  
             }, 2000);           
