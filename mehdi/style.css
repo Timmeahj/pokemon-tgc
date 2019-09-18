@@ -221,3 +221,17 @@ border:2px solid rgba(255,255,255,0.6);
     left:130px;
     opacity:0.4;
 }
+
+#you {
+    position:absolute;
+    left:50px;
+    top:10px;
+    color:red;
+}
+
+#mystic {
+    position:absolute;
+    right:0;
+    top:10px;
+    color:darkblue;
+}
