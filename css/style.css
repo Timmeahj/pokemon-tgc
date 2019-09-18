@@ -17,17 +17,11 @@ header img {
 
 .kaderDiv {
   margin-top: 1%;
-  background: red;
+  background-image: linear-gradient(to bottom, #ffeb19, #ffda0c, #ffca05, #feb906, #fba90d);
   border: blue 1px solid;
   height: 750px;
   margin-left: 10%;
   margin-right: 10%; }
-
-.sidebar {
-  height: 100%;
-  width: 75%;
-  background-color: blue;
-  border: 1px green solid; }
 
 ul {
   list-style-type: none;
@@ -44,17 +38,39 @@ p {
   padding-left: 15%;
   padding-right: 15%; }
 
-.text-muted2 {
-  margin-left: 5%; }
+.text-muted {
+  color: white; }
 
-h5 {
+.text-muted2 {
+  margin-left: 5%;
+  color: white; }
+
+.text-muted2:link {
+  color: white; }
+
+.text-muted2:visited {
+  color: white; }
+
+.text-muted2:hover {
+  color: white; }
+
+.text-muted2:active {
+  color: white; }
+
+#menuknop {
   color: white;
-  font-size: 40px; }
+  font-size: 1.5rem; }
 
 span {
   font-size: 20px;
   color: white; }
 
+.home {
+  max-height: 100%; }
+
+@media only screen and (max-width: 540px) {
+  p {
+    font-size: 0.5rem; } }
 /* Barend scss */
 * {
   border: none !important; }
