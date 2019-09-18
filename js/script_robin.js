@@ -44,12 +44,14 @@ allCards(function () {
     var hp;
     var name;
     var type;
+    var id;
 
     var pcCard = deck2[Math.floor(Math.random() * deck2.length)];
     var pcAttack;
     var pcHp = pcCard.card.hp;
     var pcName;
     var pcType;
+    var pcId
 
     var combat;
 
@@ -63,52 +65,40 @@ allCards(function () {
         console.log(humanCards[i]);
 
         humanHand[i].addEventListener("click", function() {
+            
+            var newCard = deck1[Math.floor(Math.random() * deck1.length)];
+            var newCardImg = newCard.card.imageUrl;
+            this.innerHTML = '<img class="card-img-top" src="'+newCardImg+'" alt="Card image cap">';
+
             document.getElementById("clickZone").classList.remove("doClick");
 
             if(this == humanHand[0]){
-                attack = /*humanCards[0].card.attacks*/30;
-                hp = humanCards[0].card.hp;
-                name = humanCards[0].card.name;
-                type = humanCards[0].card.types;
-                id = humanCards[0].card.nationalPokedexNumber;
-                console.log(name);
+                index = 0;
             }
 
             if(this == humanHand[1]){
-                attack = /*humanCards[1].card.attacks*/30;
-                hp = humanCards[1].card.hp;
-                name = humanCards[1].card.name;
-                type = humanCards[1].card.types;
-                id = humanCards[1].card.nationalPokedexNumber;
-                console.log(name);
+                index = 1;
             }
 
             if(this == humanHand[2]){
-                attack = /*humanCards[2].card.attacks*/30;
-                hp = humanCards[2].card.hp;
-                name = humanCards[2].card.name;
-                type = humanCards[2].card.types;
-                id = humanCards[2].card.nationalPokedexNumber;
-                console.log(name);
+                index = 2;
             }
         
             if(this == humanHand[3]){
-                attack = /*humanCards[3].card.attacks*/30;
-                hp = humanCards[3].card.hp;
-                name = humanCards[3].card.name;
-                type = humanCards[3].card.types;
-                id = humanCards[3].card.nationalPokedexNumber;
-                console.log(name);
+                index = 3;
             }
 
             if(this == humanHand[4]){
-                attack = /*humanCards[4].card.attacks*/30;
-                hp = humanCards[4].card.hp;
-                name = humanCards[4].card.name;
-                type = humanCards[4].card.types;
-                id = humanCards[4].card.nationalPokedexNumber;
-                console.log(name);
+                index = 4;
             }
+
+            attack = /*humanCards[0].card.attacks*/30;
+            hp = humanCards[index].card.hp;
+            name = humanCards[index].card.name;
+            type = humanCards[index].card.types;
+            id = humanCards[index].card.nationalPokedexNumber;
+            console.log(name);
+            humanCards[index] = newCard;
 
             //console.log(name);
             fetch("https://pokeapi.co/api/v2/pokemon/" + id)
