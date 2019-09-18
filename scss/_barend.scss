@@ -46,53 +46,38 @@ body{
   width: 100px;
 }
 
-.humanPokeHp{
+.pokeHp{
   height: 20px;
   color: white;
-  width: 100%;
-}
-
-.pcPokeHp{
-  height: 20px;
-  color: white;
-  width: 100%;
-}
-
-.humanPokeHp > div{
-  background: green;
-}
-
-.pcPokeHp > div{
   background: red;
+  width: 100%;
 }
 
-.pokeHpText{
+.pokeHp2{
   height: 20px;
 }
 
-.styleHp{
+.playerHp{
   height: 40px;
   font-size: 1.3em;
   margin-top: 25px;
   margin-bottom: 25px;
 }
 
-#humanHp{
-  background: green;
-  width: 100%;
-}
 
-#pcHp{
+#pc-progress-bar {
   background: red;
-  width: 100%;
-}
-
-
-.progress-bar {
   color: white;
   font-weight: bold;
   width: 100%;
-  border-radius: 5px;
+}
+
+#player-progress-bar {
+  height: 40px;
+  background: red;
+  color: white;
+  font-weight: bold;
+  width: 100%;
 }
 
 
@@ -158,9 +143,5 @@ body{
 section{
   margin-top: 50px;
   margin-bottom: 50px;
-}
-
-.gone{
-  display: none;
 }
 

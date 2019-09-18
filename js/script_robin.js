@@ -55,8 +55,6 @@ allCards(function () {
 
     var combat;
 
-    var count = 5;
-
     for(var i = 0; i < handSize; i++){
         var imageUrlHuman = humanCards[i].card.imageUrl;
         var imageUrlPc = pcCards[i].card.imageUrl;
@@ -68,17 +66,11 @@ allCards(function () {
 
         humanHand[i].addEventListener("click", function() {
             
-            var newCard = deck1[count];
-            count++;
-            if(count == 29){
-                count = 0;
-            }
+            var newCard = deck1[Math.floor(Math.random() * deck1.length)];
             var newCardImg = newCard.card.imageUrl;
             this.innerHTML = '<img class="card-img-top" src="'+newCardImg+'" alt="Card image cap">';
 
             document.getElementById("clickZone").classList.remove("doClick");
-            document.getElementById("humanStats").classList.remove("gone");
-            document.getElementById("pcStats").classList.remove("gone");
 
             if(this == humanHand[0]){
                 index = 0;
@@ -107,6 +99,8 @@ allCards(function () {
             id = humanCards[index].card.nationalPokedexNumber;
             console.log(name);
             humanCards[index] = newCard;
+
+            
 
             //console.log(name);
             fetch("https://pokeapi.co/api/v2/pokemon/" + id)
