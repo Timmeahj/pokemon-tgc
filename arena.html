@@ -7,137 +7,109 @@
     <meta name="keywords" content="pokémon, cards, card, game">
     <meta name="author" content="">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pokémon arena TGC</title>
+    <title>Arena</title>
     <link href="css/reset.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/style.css" type="text/css" rel="stylesheet"/>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148154345-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-148154345-1');
-    </script>
 </head>
 <body>
+
 <div class="noClick doClick" id="clickZone"></div>
 
     <section class="container" id="header">
-
-        <!-- HP -->
-
-        <div class="progress playerHp" id="pc-hp">
-            <div class="progress-bar" id="pc-progress-bar" role="progressbar">Enemy HP</div>
-        </div>
-
-        <!-- Cards -->
-
+        <!-- PC Cards -->
         <div class="card-deck" id="pc-cards">
-            <div class="card" id="pc-card-one">
-                <!-- <div class="card-header bg-transparent" id="pc-card-one-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="pc-card-one-img">
-                <!-- <div class="card-footer bg-transparent" id="pc-card-one-att">ATT: 352</div> -->
+            <div class="card">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap">
             </div>
-            <div class="card" id="pc-card-two">
-                <!-- <div class="card-header bg-transparent" id="pc-card-two-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="pc-card-two-img">
-
-                <!-- <div class="card-footer bg-transparent" id="pc-card-two-att">ATT: 352</div> -->
+            <div class="card">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap">
             </div>
-            <div class="card" id="pc-card-three">
-                <!-- <div class="card-header bg-transparent" id="pc-card-three-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="pc-card-three-img">
-
-                <!-- <div class="card-footer bg-transparent" id="pc-card-three-att">ATT: 352</div> -->
+            <div class="card">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap">
             </div>
-            <div class="card" id="pc-card-four">
-                <!-- <div class="card-header bg-transparent" id="pc-card-four-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="pc-card-four-img">
-                <!-- <div class="card-footer bg-transparent" id="pc-card-four-att">ATT: 352</div> -->
+            <div class="card">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap">
             </div>
-            <div class="card" id="pc-card-five">
-                <!-- <div class="card-header bg-transparent" id="pc-card-five-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="pc-card-five-img">
-                <!-- <div class="card-footer bg-transparent" id="pc-card-five-att">ATT: 352</div> -->
+            <div class="card">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap">
             </div>
         </div>
+        <!-- End PC Cards -->
 
+        <!-- Pc HP -->
+        <div class="progress styleHp">
+            <div class="progress-bar" id="pcHp" role="progressbar">Enemy HP</div>
+        </div>
+        <!-- End Pc HP -->
     </section>
 
     <section class="container" id="battle-arena">
-
+        <!-- Arena -->
         <div class="card-deck" id="middle-cards">
+            <!-- Human Stats -->
             <div class="stats gone" id="humanStats">
-                <div class="pokeHp progress" id="poke-hp">
-                    <div class="progress-bar pokeHp2" id="pc-progress-bar" role="progressbar"><span id="humanHp"></span> HP</div>
+                <div class="humanPokeHp progress">
+                    <div class="progress-bar pokeHpText" id="humanPokeHp" role="progressbar">
+                        <span id="humanHp"></span> HP
+                    </div>
                 </div>
-                <p id="attackStat">Atk: <span id="humanAtk"></span></p>
-                <p id="typeStat">Type: <span id="humanType"></span></p>
+                <p>Atk: <span id="humanAtk"></span></p>
+                <p>Type: <span id="humanType"></span></p>
             </div>
             <div class="card" id="player-card-choice">
-                <!-- <div class="card-header bg-transparent" id="player-card-choice-hp">HP: 58</div> -->
+                <!-- Human Poke -->
                 <img class="card-img-top imgflip" src="./img/ball.png" alt="Card image cap" id="player-card-choice-img">
-                <!-- <div class="card-footer bg-transparent" id="player-card-choice-att">ATT: 352</div> -->
             </div>
+            <!-- End Human Stats -->
 
             <div id="versus">VS</div>
 
+            <!-- PC Stats -->
             <div class="card" id="pc-card-choice">
-                <!-- <div class="card-header bg-transparent" id="pc-card-choice-hp">HP: 58</div> -->
+                <!-- PC Poke -->
                 <img class="card-img-top" src="./img/ball.png" alt="Card image cap" id="pc-card-choice-img">
-                <!-- <div class="card-footer bg-transparent" id="pc-card-choice-att">ATT: 352</div> -->
             </div>
             <div class="stats gone" id="pcStats">
-                <div class="pokeHp progress" id="pc-poke-hp">
-                    <div class="progress-bar pokeHp2" id="pc-progress-bar" role="progressbar"><span id="pcHp"></span>HP</div>
+                <div class="pcPokeHp progress">
+                    <div class="progress-bar pokeHpText" id="pcPokeHp" role="progressbar">
+                        <span id="pcPokeHpText"></span>HP
+                    </div>
                 </div>
-                <p id="attackStat">Atk: <span id="pcAtk"></span></p>
-                <p id="typeStat">Type: <span id="pcType"></span></p>
+                <p>Atk: <span id="pcAtk"></span></p>
+                <p>Type: <span id="pcType"></span></p>
             </div>
+            <!-- End Pc Stats -->
         </div>
-
+        <!-- End Arena -->
     </section>
 
     <section class="container">
+        <!-- Your HP -->
+        <div class="progress styleHp">
+            <div class="progress-bar" id="humanHp" role="progressbar">Your HP</div>
+        </div>
+        <!-- End Human HP -->
 
-        <!-- Cards -->
-
+        <!-- Human Cards -->
         <div class="card-deck" id="player-cards">
-            <div class="card" id="player-card-one">
-                <!-- <div class="card-header bg-transparent" id="player-card-one-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="player-card-one-img">
-                <!-- <div class="card-footer bg-transparent" id="player-card-one-att">ATT: 352</div> -->
+            <div class="card">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap">
             </div>
-            <div class="card" id="player-card-two">
-                <!-- <div class="card-header bg-transparent" id="player-card-two-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="player-card-two-img">
-                <!-- <div class="card-footer bg-transparent" id="player-card-two-att">ATT: 352</div> -->
+            <div class="card">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap">
             </div>
-            <div class="card" id="player-card-three">
-                <!-- <div class="card-header bg-transparent" id="player-card-three-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="player-card-three-img">
-                <!-- <div class="card-footer bg-transparent" id="player-card-three-att">ATT: 352</div> -->
+            <div class="card">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap">
             </div>
-            <div class="card" id="player-card-four">
-                <!-- <div class="card-header bg-transparent" id="player-card-four-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="player-card-four-img">
-                <!-- <div class="card-footer bg-transparent" id="player-card-four-att">ATT: 352</div> -->
+            <div class="card">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap">
             </div>
-            <div class="card" id="player-card-five">
-                <!-- <div class="card-header bg-transparent" id="player-card-five-hp">HP: 58</div> -->
-                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap" id="player-card-five-img">
-                <!-- <div class="card-footer bg-transparent" id="player-card-five-att">ATT: 352</div> -->
+            <div class="card">
+                <img class="card-img-top" src="./img/examples/cardback.png" alt="Card image cap">
             </div>
         </div>
-
-        <!-- HP -->
-
-        <div class="progress playerHp" id="player-hp">
-            <div class="progress-bar" id="player-progress-bar" role="progressbar">Your HP</div>
-        </div>
-
+        <!-- End Human Cards -->
     </section>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
