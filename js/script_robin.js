@@ -139,6 +139,12 @@ allCards(function () {
 
             document.getElementById("humanAtk").innerHTML = attack;
             document.getElementById("humanType").innerHTML = type;
+            if(humanCards[index].card.weaknesses != undefined){
+                document.getElementById("humanWeakness").innerHTML = humanCards[index].card.weaknesses[0].type;
+            }
+            else{
+                document.getElementById("humanWeakness").innerHTML = "none";
+            }
             //console.log(name);
 
             //console.log(name);
@@ -178,6 +184,15 @@ allCards(function () {
             pcType = pcCard.card.types;
             pcId = pcCard.card.nationalPokedexNumber;
 
+            document.getElementById("pcAtk").innerHTML = pcAttack;
+            document.getElementById("pcType").innerHTML = pcType;
+            if(pcCard.card.weaknesses != undefined){
+                document.getElementById("pcWeakness").innerHTML = pcCard.card.weaknesses[0].type;
+            }
+            else{
+                document.getElementById("pcWeakness").innerHTML = "none";
+            }
+
             fetch("https://pokeapi.co/api/v2/pokemon/" + pcId)
                 .then(function(response) {
                     return response.json();
@@ -193,6 +208,18 @@ allCards(function () {
             function computerAttack () {
                 hp = hp-pcAttack;
                 playerHp = playerHp-pcAttack;
+                if(humanCards[index].card.weaknesses != undefined){
+                    console.log(humanCards[index].card.weaknesses[0].type);
+                    if(humanCards[index].card.weaknesses != undefined){
+                        document.getElementById("humanWeakness").innerHTML = humanCards[index].card.weaknesses[0].type;
+                    }
+                    else{
+                        document.getElementById("humanWeakness").innerHTML = "none";
+                    }
+                    if(humanCards[index].card.weaknesses[0].type == pcType){
+                        hp = hp-(pcAttack/2);
+                    }
+                }
                 if(hp<=0){
                     hp = 0;
                 }
@@ -222,6 +249,18 @@ allCards(function () {
             function humanAttack () {
                 pcHp = pcHp-attack;
                 enemyHp = enemyHp-attack;
+                if(pcCard.card.weaknesses != undefined){
+                    console.log(pcCard.card.weaknesses[0].type);
+                    if(pcCard.card.weaknesses != undefined){
+                        document.getElementById("pcWeakness").innerHTML = pcCard.card.weaknesses[0].type;
+                    }
+                    else{
+                        document.getElementById("pcWeakness").innerHTML = "none";
+                    }
+                    if(pcCard.card.weaknesses[0].type == type){
+                        pcHp = pcHp-(attack/2);
+                    }
+                }
                 if(pcHp<=0){
                     pcHp = 0;
                 }
@@ -270,6 +309,12 @@ allCards(function () {
                         pcHp = pcCard.card.hp;
                         pcName = pcCard.card.name;
                         pcType = pcCard.card.types;
+
+                        document.getElementById("pcAtk").innerHTML = pcAttack;
+                        document.getElementById("pcType").innerHTML = pcType;
+                        if(pcCard.card.weaknesses != undefined){
+                            document.getElementById("pcWeakness").innerHTML = pcCard.card.weaknesses[0].type;
+                        }
                     });
                 }
                 if(enemyHp<=0){
