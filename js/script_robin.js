@@ -25,7 +25,6 @@ function allCards(callback){
 }
 
 allCards(function () {
-    createPlayerDeck();
 
     var shuffled = cards.sort(() => 0.5 - Math.random());
 
@@ -43,6 +42,8 @@ allCards(function () {
     var playerHp = 1000;
     var playerHpBar;
     var attack;
+    var attackOne;
+    var attackTwo;
     var hp;
     var name;
     var type;
@@ -53,6 +54,8 @@ allCards(function () {
     var enemyHpBar;
     var pcCard = deck2[Math.floor(Math.random() * deck2.length)];
     var pcAttack;
+    var pcAttackOne;
+    var pcAttackTwo;
     var pcHp = pcCard.card.hp;
     var pcName;
     var pcType;
@@ -108,7 +111,27 @@ allCards(function () {
                 index = 4;
             }
 
-            attack = /*humanCards[0].card.attacks*/30;
+            attackOne = humanCards[index].card.attacks[0].damage.replace(/[^0-9]/g,'');
+            attackTwo = humanCards[index].card.attacks[1];
+
+            if (attackOne == "" || attackOne == undefined){
+                attackOne = 0;
+            }
+
+            if (attackTwo == "" || attackTwo == undefined){
+                attackTwo = 0;
+            }
+            else{
+                attackTwo = attackTwo.damage.replace(/[^0-9]/g,'');
+            }
+
+            if (attackOne < attackTwo){
+                attack = attackTwo;
+            }
+            else {
+                attack = attackOne;
+            }
+
             hp = humanCards[index].card.hp;
             name = humanCards[index].card.name;
             type = humanCards[index].card.types;
@@ -128,9 +151,29 @@ allCards(function () {
                     var picture = pokemon.sprites.front_default;
                     document.getElementById("player-card-choice-img").src = picture;
 
-                })
+                });
 
-            pcAttack = /*pcCard.card.attacks*/20;
+            pcAttackOne = pcCard.card.attacks[0].damage.replace(/[^0-9]/g,'');
+            pcAttackTwo = pcCard.card.attacks[1];
+
+            if (pcAttackOne === "" || pcAttackOne === undefined){
+                pcAttackOne = 0;
+            }
+
+            if (pcAttackTwo === "" || pcAttackTwo === undefined){
+                pcAttackTwo = 0;
+            }
+            else{
+                pcAttackTwo = pcAttackTwo.damage.replace(/[^0-9]/g,'');
+            }
+
+            if (pcAttackOne < pcAttackTwo){
+                pcAttack = pcAttackTwo;
+            }
+            else {
+                pcAttack = pcAttackOne;
+            }
+
             pcName = pcCard.card.name;
             pcType = pcCard.card.types;
             pcId = pcCard.card.nationalPokedexNumber;
@@ -187,7 +230,7 @@ allCards(function () {
                 document.getElementById("pcPokeHp").style.width = pcHpBar + "%";
                 document.getElementById("pcHp").style.width = enemyHpBar + "%";
 
-                //console.log(hp, pcHp, pcHpBar);
+                console.log(hp, pcHp, pcHpBar);
                 setTimeout(computerAttack, 2000);
                 if (pcHp<=0){
                     pcHpBar = 100;
@@ -203,8 +246,27 @@ allCards(function () {
                             .then(function(pokemon) {
                                 pcPicture = pokemon.sprites.front_default;
                                 document.getElementById("pc-card-choice-img").src = pcPicture;
-                            })
-                        pcAttack = /*pcCard.card.attacks*/20;
+                            });
+                        pcAttackOne = pcCard.card.attacks[0].damage.replace(/[^0-9]/g,'');
+                        pcAttackTwo = pcCard.card.attacks[1];
+
+                        if (pcAttackOne === "" || pcAttackOne === undefined){
+                            pcAttackOne = 0;
+                        }
+
+                        if (pcAttackTwo === "" || pcAttackTwo === undefined){
+                            pcAttackTwo = 0;
+                        }
+                        else{
+                            pcAttackTwo = pcAttackTwo.damage.replace(/[^0-9]/g,'');
+                        }
+
+                        if (pcAttackOne < pcAttackTwo){
+                            pcAttack = pcAttackTwo;
+                        }
+                        else {
+                            pcAttack = pcAttackOne;
+                        }
                         pcHp = pcCard.card.hp;
                         pcName = pcCard.card.name;
                         pcType = pcCard.card.types;
@@ -221,8 +283,3 @@ allCards(function () {
     }
 
 });
-
-function createPlayerDeck(){
-
-    //console.log(deck1, deck2, cards, hand1, hand2);
-}
