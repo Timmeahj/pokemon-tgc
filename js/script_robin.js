@@ -40,20 +40,28 @@ allCards(function () {
     var pcHand = Array.from(document.getElementById("pc-cards").getElementsByClassName("card"));
 
     //console.log(humanHand[2].innerHTML, humanCards);
+    var playerHp = 1000;
+    var playerHpBar;
     var attack;
     var hp;
     var name;
     var type;
     var id;
+    var hpBar;
 
+    var enemyHp = 1000;
+    var enemyHpBar;
     var pcCard = deck2[Math.floor(Math.random() * deck2.length)];
     var pcAttack;
     var pcHp = pcCard.card.hp;
     var pcName;
     var pcType;
-    var pcId
+    var pcId;
+    var pcHpBar;
 
     var combat;
+
+    var count = 5;
 
     for(var i = 0; i < handSize; i++){
         var imageUrlHuman = humanCards[i].card.imageUrl;
@@ -62,15 +70,23 @@ allCards(function () {
         //console.log(imageUrlHuman, humanHand[i].firstChild);
 
         humanHand[i].innerHTML = '<img class="card-img-top" src="'+imageUrlHuman+'" alt="Card image cap">';
-        console.log(humanCards[i]);
+        //console.log(humanCards[i]);
 
         humanHand[i].addEventListener("click", function() {
-            
-            var newCard = deck1[Math.floor(Math.random() * deck1.length)];
+            hpBar = 100;
+            document.getElementById("humanPokeHp").style.width = hpBar + "%";
+
+            var newCard = deck1[count];
+            count++;
+            if(count == 29){
+                count = 0;
+            }
             var newCardImg = newCard.card.imageUrl;
             this.innerHTML = '<img class="card-img-top" src="'+newCardImg+'" alt="Card image cap">';
 
             document.getElementById("clickZone").classList.remove("doClick");
+            document.getElementById("humanStats").classList.remove("gone");
+            document.getElementById("pcStats").classList.remove("gone");
 
             if(this == humanHand[0]){
                 index = 0;
@@ -97,10 +113,10 @@ allCards(function () {
             name = humanCards[index].card.name;
             type = humanCards[index].card.types;
             id = humanCards[index].card.nationalPokedexNumber;
-            console.log(name);
-            humanCards[index] = newCard;
 
-            
+            document.getElementById("humanAtk").innerHTML = attack;
+            document.getElementById("humanType").innerHTML = type;
+            //console.log(name);
 
             //console.log(name);
             fetch("https://pokeapi.co/api/v2/pokemon/" + id)
@@ -128,12 +144,54 @@ allCards(function () {
                     document.getElementById("pc-card-choice-img").src = pcPicture;
                 })
 
-            console.log(pcName, hp, pcHp);
+            //console.log(pcName, hp, pcHp);
 
-            combat = setInterval(function(){ 
+
+            function computerAttack () {
+                hp = hp-pcAttack;
+                playerHp = playerHp-pcAttack;
+                if(hp<=0){
+                    hp = 0;
+                }
+                playerHpBar = (playerHp / 1000) * 100;
+                hpBar = (hp / humanCards[index].card.hp) * 100;
+                document.getElementById("humanPokeHp").style.width = hpBar + "%";
+                document.getElementById("humanHp").style.width = playerHpBar + "%";
+                console.log(playerHp)
+                
+                //console.log(hp, pcHp, hpBar);
+                if (hp>0) { 
+                    setTimeout(humanAttack, 2000);
+                }
+                else{
+                    hpBar = 100;
+                    humanCards[index] = newCard;
+                    document.getElementById("clickZone").classList.add("doClick");
+                    document.getElementById("player-card-choice-img").src = "./img/ball.png";
+                }
+                if(playerHp<=0){
+                    alert("You lose, try again!");
+                    location.reload();
+                }    
+            }
+
+
+            function humanAttack () {
                 pcHp = pcHp-attack;
-                hp = hp-pcAttack; 
-                if(pcHp <= 0){
+                enemyHp = enemyHp-attack;
+                if(pcHp<=0){
+                    pcHp = 0;
+                }
+                enemyHpBar = (enemyHp / 1000) * 100;
+                pcHpBar = (pcHp / pcCard.card.hp) * 100;
+                document.getElementById("pcPokeHp").style.width = pcHpBar + "%";
+                document.getElementById("pcHp").style.width = enemyHpBar + "%";
+
+                //console.log(hp, pcHp, pcHpBar);
+                setTimeout(computerAttack, 2000);
+                if (pcHp<=0){
+                    pcHpBar = 100;
+                    document.getElementById("pcPokeHp").style.width = pcHpBar + "%";
                     document.getElementById("pc-card-choice-img").src = "./img/ball.png";
                     setTimeout(function(){ 
                         pcCard = deck2[Math.floor(Math.random() * deck2.length)];
@@ -150,15 +208,15 @@ allCards(function () {
                         pcHp = pcCard.card.hp;
                         pcName = pcCard.card.name;
                         pcType = pcCard.card.types;
-                    }, 1000);
+                    });
                 }
-                if(hp <= 0){
-                    clearInterval(combat);
-                    document.getElementById("clickZone").classList.add("doClick");
-                    document.getElementById("player-card-choice-img").src = "./img/ball.png";
-                }
-                console.log(hp, pcHp, pcName);  
-            }, 2000);           
+                if(enemyHp<=0){
+                    alert("You win, another round?");
+                    location.reload();
+                }     
+            }
+
+            setTimeout(humanAttack, 2000);
         });
     }
 
