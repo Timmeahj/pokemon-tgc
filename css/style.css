@@ -1,5 +1,41 @@
 /* Tim scss */
 /* Robin scss */
+#endScreen {
+  background-color: rgba(0, 0, 0, 0.95);
+  border: 2px solid black;
+  position: fixed;
+  padding: 20%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 10000; }
+
+#endText {
+  color: white;
+  font-size: 50px;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), #fff, rgba(0, 0, 0, 0.95));
+  background-repeat: no-repeat;
+  background-size: 85%;
+  animation: animate 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0); }
+
+@keyframes animate {
+  0% {
+    background-position: -500%; }
+  100% {
+    background-position: 500%; } }
+.endbutton {
+  border-radius: 30px;
+  margin: 15px;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: #33A2FB; }
+
 /* Mehdi scss */
 /* Mouad scss */
 body {
@@ -23,7 +59,22 @@ header img {
   margin-right: 10%; }
 
 .homeknop, .arenaknop, .aboutusknop {
-  color: inherit;
+  color: white;
+  text-decoration: none; }
+
+.arenaknop, .aboutusknop {
+  padding-left: 3%; }
+
+.homeknop, .arenaknop, .aboutusknop:link {
+  text-decoration: none; }
+
+.homeknop, .arenaknop, .aboutusknop:visited {
+  text-decoration: none; }
+
+.homeknop, .arenaknop, .aboutusknop:hover {
+  text-decoration: none; }
+
+.homeknop, .arenaknop, .aboutusknop:active {
   text-decoration: none; }
 
 ul {
@@ -60,7 +111,7 @@ p {
   margin-bottom: 5px; }
 
 #player-card-choice, #pc-card-choice {
-  background: transparent !important; }
+  background: rgba(0, 0, 0, 0) !important; }
 
 body {
   background: radial-gradient(#33A2FB, #54C3FD); }
