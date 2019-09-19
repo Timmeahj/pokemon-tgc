@@ -1,5 +1,41 @@
 /* Tim scss */
 /* Robin scss */
+#endScreen {
+  background-color: rgba(0, 0, 0, 0.95);
+  border: 2px solid black;
+  position: fixed;
+  padding: 20%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 10000; }
+
+#endText {
+  color: white;
+  font-size: 50px;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), #fff, rgba(0, 0, 0, 0.95));
+  background-repeat: no-repeat;
+  background-size: 85%;
+  animation: animate 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0); }
+
+@keyframes animate {
+  0% {
+    background-position: -500%; }
+  100% {
+    background-position: 500%; } }
+.endbutton {
+  border-radius: 30px;
+  margin: 15px;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: #33A2FB; }
+
 /* Mehdi scss */
 /* Mouad scss */
 body {
@@ -120,10 +156,13 @@ p {
   margin-bottom: 5px; }
 
 #player-card-choice, #pc-card-choice {
-  background: transparent !important; }
+  background: rgba(0, 0, 0, 0) !important; }
 
 body {
-  background: radial-gradient(#33A2FB, #54C3FD); }
+  background-image: linear-gradient(to bottom, #ffeb19, #ffda0c, #ffca05, #feb906, #fba90d);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; }
 
 .card-deck {
   display: flex;
@@ -139,10 +178,14 @@ body {
   align-content: center; }
 
 .card {
-  max-width: 11rem; }
+  max-width: 11rem;
+  transition: 0.3s; }
+
+#player-cards > .card:hover {
+  cursor: pointer; }
 
 .stats {
-  width: 100px; }
+  width: 20%; }
 
 .humanPokeHp {
   height: 20px;
@@ -226,7 +269,7 @@ body {
   color: white;
   font-weight: bold;
   font-size: 2em;
-  line-height: 110px; }
+  margin-top: -40px; }
 
 .doClick {
   display: none; }
@@ -237,5 +280,26 @@ section {
 
 .gone {
   display: none; }
+
+.landscape {
+  z-index: 1000000000000;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  margin-top: -50px;
+  padding-top: 100px;
+  font-weight: bold;
+  display: none; }
+
+.landscape:hover {
+  cursor: pointer; }
+
+@media only screen and (max-width: 575px) {
+  .landscape {
+    display: block; } }
 
 /*# sourceMappingURL=style.css.map */

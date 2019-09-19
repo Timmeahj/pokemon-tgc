@@ -10,9 +10,11 @@ The first key was hit on monday 16 sept. 2019 and the last one fell on friday 20
 	- Tim				https://github.com/Timmeahi
 	- Barend Stroobants		https://github.com/BarendStroobants
 
-Our team worked hard for five day’s on 2 pages, the landing page / homepage, and the arena. Mouad put all his knowledge in the homepage. Mehdi and Barend worked on the styling of the arena. Robin and Tim build the javascript. Not bad for 5 student junior web-developers, right!?
+Our team worked hard for five day’s on 3 pages, the landing page / homepage,a about us page, and the arena. Mouad put all his knowledge in the homepage and about us page. Mehdi and Barend worked on the styling of the arena. Robin and Tim build the javascript. Not bad for 5 student junior web-developers, right!?
 
 What does it look like?
+
+![alt text](./img/examples/screenshot.png)
 
 Both players are placed across from each other. In the middle you see 2 Pokemon,  both with their own HP-bar, and stats like Atk and Type. At the bottom of the screen you’ll see your HP-bar and your 5 cards. At the top is the computer. It was a fun exercise and we’re past the deadline, but like every web-developer would say; there is no such thing as “finished”.
 
