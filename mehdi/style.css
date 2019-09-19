@@ -47,6 +47,8 @@ body {
     transform: rotate(90deg);
     position:absolute;
     z-index:0;
+    border-radius:25px;
+    opacity:0.4;
 
 }
 #player-choice {
@@ -203,3 +205,55 @@ border:2px solid rgba(255,255,255,0.6);
 
 
 
+#pc-one {
+
+    width:150px;
+    height:180px;
+    right: 30px;
+    position:absolute;
+    top:10px;
+
+
+}
+#pc-two {
+
+    width:150px;
+    height:180px;
+    left: 30px;
+    position:absolute;
+    top:10px;
+
+
+}
+#pc-three {
+
+    width:150px;
+    height:180px;
+    right: 30px;
+    position:absolute;
+    top:205px;
+
+
+}
+#pc-four {
+
+    width:150px;
+    height:180px;
+    left: 30px;
+    position:absolute;
+    top:205px;
+
+
+}
+#pc-five {
+    width:150px;
+    height:180px;
+    right: 30px;
+    position:absolute;
+    bottom:50px;
+}
+
+
+card {
+    position:absolute;
+}
