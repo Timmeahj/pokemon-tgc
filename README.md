@@ -10,7 +10,7 @@ The first key was hit on monday 16 sept. 2019 and the last one fell on friday 20
 	- Tim				https://github.com/Timmeahi
 	- Barend Stroobants		https://github.com/BarendStroobants
 
-Our team worked hard for five day’s on 2 pages, the landing page / homepage, and the arena. Mouad put all his knowledge in the homepage. Mehdi and Barend worked on the styling of the arena. Robin and Tim build the javascript. Not bad for 5 student junior web-developers, right!?
+Our team worked hard for five day’s on 3 pages, the landing page / homepage,a about us page, and the arena. Mouad put all his knowledge in the homepage and about us page. Mehdi and Barend worked on the styling of the arena. Robin and Tim build the javascript. Not bad for 5 student junior web-developers, right!?
 
 What does it look like?
 

@@ -114,7 +114,10 @@ p {
   background: rgba(0, 0, 0, 0) !important; }
 
 body {
-  background: radial-gradient(#33A2FB, #54C3FD); }
+  background-image: linear-gradient(to bottom, #ffeb19, #ffda0c, #ffca05, #feb906, #fba90d);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; }
 
 .card-deck {
   display: flex;
