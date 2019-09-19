@@ -24,9 +24,29 @@ header img{
 }
 
 .homeknop, .arenaknop,.aboutusknop {
-  color: inherit;
+  color: white;
+  text-decoration: none;
+
+}
+.arenaknop,.aboutusknop{
+  padding-left: 3%;
+}
+.homeknop, .arenaknop,.aboutusknop:link {
   text-decoration: none;
 }
+
+.homeknop, .arenaknop,.aboutusknop:visited {
+  text-decoration: none;
+}
+
+.homeknop, .arenaknop,.aboutusknop:hover {
+  text-decoration: none;
+}
+
+.homeknop, .arenaknop,.aboutusknop:active {
+  text-decoration: none;
+}
+
 
 ul {
   list-style-type: none;
