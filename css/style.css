@@ -173,11 +173,9 @@ header img {
   text-decoration: none; }
 
 #pic-one, #pic-three, #pic-four, #pic-five {
-  transform: rotate(90deg);
   border-radius: 25px; }
 
 #pic-two {
-  transform: rotate(-90deg);
   border-radius: 25px; }
 
 .fotos {
@@ -219,7 +217,7 @@ p {
   margin-bottom: 5px; }
 
 #player-card-choice, #pc-card-choice {
-  background: transparent !important; }
+  background: rgba(0, 0, 0, 0) !important; }
 
 .card-deck {
   display: flex;
