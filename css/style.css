@@ -78,7 +78,7 @@
   transition: 0.3s;
   text-align: center;
   line-height: 50px;
-  z-index: 9999999999999999999999;
+  z-index: 9999;
   border-radius: 20px; }
 
 .gohome:hover {
@@ -96,7 +96,7 @@
   left: 0;
   height: 100vh;
   width: 100%;
-  z-index: 10000; }
+  z-index: 100000; }
 
 #endText {
   color: white;
