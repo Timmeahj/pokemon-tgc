@@ -50,7 +50,7 @@ allCards(function () {
     var id;
     var hpBar;
 
-    var enemyHp = 5;
+    var enemyHp = 1000;
     var enemyHpBar;
     var pcCard = deck2[Math.floor(Math.random() * deck2.length)];
     var pcAttack;
