@@ -110,7 +110,7 @@
   font-size: 50px;
   font-family: 'Anton', sans-serif;
   letter-spacing: 4px;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), #fff, rgba(0, 0, 0, 0.95));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), #fff, #ffd70d, #fff, rgba(0, 0, 0, 0.95));
   background-repeat: no-repeat;
   background-size: 85%;
   animation: animate 5s linear infinite;
@@ -227,7 +227,7 @@ p {
   margin-bottom: 5px; }
 
 #player-card-choice, #pc-card-choice {
-  background: transparent !important; }
+  background: rgba(0, 0, 0, 0) !important; }
 
 .card-deck {
   display: flex;
