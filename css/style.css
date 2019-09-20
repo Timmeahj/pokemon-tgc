@@ -32,7 +32,9 @@
   transition: 0.3s; }
 
 .play:hover {
-  background: black; }
+  background: black;
+  width: 170px;
+  height: 170px; }
 
 .fullwidth {
   width: 100%;
@@ -71,24 +73,31 @@
   border: 0px solid black; }
 
 .gohome {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   position: fixed;
   right: 5px;
   top: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border: 2px solid white;
   color: white;
-  background: black;
+  font-weight: bold;
+  text-transform: uppercase;
   text-decoration: none;
   transition: 0.3s;
   text-align: center;
-  line-height: 50px;
-  z-index: 9999;
-  border-radius: 20px; }
+  line-height: 70px;
+  z-index: 9999; }
 
 .gohome:hover {
-  background: white;
-  color: black;
-  cursor: pointer; }
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  color: white;
+  background: black;
+  cursor: pointer;
+  text-decoration: none; }
 
 #versus {
   margin-bottom: 122px; }
@@ -227,7 +236,7 @@ p {
   margin-bottom: 5px; }
 
 #player-card-choice, #pc-card-choice {
-  background: rgba(0, 0, 0, 0) !important; }
+  background: transparent !important; }
 
 .card-deck {
   display: flex;
