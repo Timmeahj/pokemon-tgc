@@ -1,10 +1,8 @@
 /* Mouad scss */
 
 body{
-  background-image: linear-gradient(to bottom, #ffeb19, #ffda0c, #ffca05, #feb906, #fba90d);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 1000%;
+  background: rgb(255,231,59);
+  background: radial-gradient(circle, rgba(255,231,59,1) 0%, rgba(255,211,0,1) 37%, rgba(203,73,46,1) 100%);;
 }
 
 header img{
@@ -60,14 +58,10 @@ header img{
 
 
 #pic-one, #pic-three, #pic-four, #pic-five {
-  height:20%;
-  width:20%;
   transform: rotate(90deg);
   border-radius:25px;
 }
 #pic-two{
-  height:20%;
-  width:20%;
   transform: rotate(-90deg);
   border-radius:25px;
 
@@ -112,23 +106,4 @@ ul {
 #menuknop{
   color: white;
   font-size: 1.5rem;
-}
-
-
-@media only screen and (max-width: 540px) {
-  .paragraaf {
-    font-size: 0.5rem;
-  }
-  #pic-one, #pic-three, #pic-four, #pic-five {
-    height:20%;
-    width:20%;
-    transform: rotate(90deg);
-    border-radius:25px;
-  }
-  #pic-two{
-    height:20%;
-    width:20%;
-    transform: rotate(-90deg);
-    border-radius:25px;
-  }
 }

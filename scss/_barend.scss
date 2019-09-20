@@ -5,10 +5,6 @@ $primary-yellow: #F2CE25;
 $primary-red: #BA1610;
 $secondary-red: #F70325;
 
-*{
-  border: none!important;
-}
-
 p{
   margin-top: 5px;
   margin-bottom: 5px;
@@ -16,13 +12,6 @@ p{
 
 #player-card-choice, #pc-card-choice{
   background: rgba(0,0,0,0)!important;
-}
-
-body{
-  background-image: linear-gradient(to bottom, #ffeb19, #ffda0c, #ffca05, #feb906, #fba90d);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
 }
 
 .card-deck {

@@ -1,1 +1,110 @@
 /* Tim scss */
+@media only screen and (max-width: 576px) {
+  .menuBig{
+  	display: none;
+  }
+}
+
+@media only screen and (min-width: 577px) {
+  .menuSmall{
+	display: none;
+  }
+}
+
+.menuBig, .menuSmall{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 100000000000
+}
+
+.imgTop{
+	width: 50%;
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+  .imgTop{
+  	width: 80%;
+  }
+}
+
+.play{
+	width: 150px;
+    height: 150px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    border: 10px double white;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+.play:hover{
+	background: black;
+}
+
+.fullwidth{
+	width: 100%;
+	text-align: center;
+}
+
+.textcenter{
+	text-align: center;
+}
+
+.marginbot{
+	margin-bottom: 50px;
+}
+
+.moremarginbot{
+	margin-bottom: 100px;
+}
+
+.menustyle > a{
+	text-decoration: none;
+	color: white;
+	margin-right: 20px;
+	transition: 0.3s;
+	padding: 5px;
+}
+
+.menustyle > a:hover{
+	background: white;
+	color: black;
+}
+
+.images > img{
+	width: 19%;
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+#pc-card-choice, #player-card-choice{
+	border: 0px solid black;
+}
+
+.gohome{
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	right: 5px;
+	top: 5px;
+	color: white;
+	background: black;
+	text-decoration: none;
+	transition: 0.3s;
+	text-align: center;
+	line-height: 50px;
+	z-index: 9999999999999999999999;
+	border-radius: 20px;
+}
+
+.gohome:hover{
+	background: white;
+	color: black;
+	cursor: pointer;
+}
