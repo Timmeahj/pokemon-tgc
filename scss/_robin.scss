@@ -4,7 +4,7 @@
   background-color: rgba(0,0,0,0.95);
   border: 2px solid black;
   position: fixed;
-  padding: 20%;
+  padding: 15%;
   top: 0;
   left: 0;
   height: 100vh;
@@ -17,12 +17,13 @@
   font-size: 50px;
   font-family: 'Anton', sans-serif;
   letter-spacing: 4px;
-  background: linear-gradient(90deg, rgba(0,0,0,0.95), #fff, #ffd70d, #fff, rgba(0,0,0,0.95));
+  background: linear-gradient(90deg, rgba(0,0,0,0.95), rgba(203,73,46,1), rgba(255,211,0,1), rgba(203,73,46,1), rgba(0,0,0,0.95));
   background-repeat: no-repeat;
   background-size: 85%;
   animation: animate 5s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  margin-bottom: 50px;
 }
 
 @keyframes animate {
@@ -35,10 +36,20 @@
 }
 
 .endbutton{
-  border-radius: 30px;
   margin: 15px;
   padding: 15px;
   font-size: 15px;
-  font-weight: bolder;
-  background-color: #33A2FB;
+  width: 150px;
+  height: 150px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  border: 10px double white;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.endbutton:hover{
+  background: rgba(203,73,46,1);
 }
