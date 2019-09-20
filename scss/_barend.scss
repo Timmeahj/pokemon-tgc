@@ -5,6 +5,10 @@ $primary-yellow: #F2CE25;
 $primary-red: #BA1610;
 $secondary-red: #F70325;
 
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 p{
   margin-top: 5px;
   margin-bottom: 5px;
@@ -184,5 +188,9 @@ section{
   .landscape{
     display: block;
   }
+}
+
+.bigFont{
+  font-size: 1.3em;
 }
 

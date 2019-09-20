@@ -212,6 +212,9 @@ ul {
   font-size: 1.5rem; }
 
 /* Barend scss */
+body {
+  font-family: 'Josefin Sans', sans-serif; }
+
 p {
   margin-top: 5px;
   margin-bottom: 5px; }
@@ -356,5 +359,7 @@ section {
 @media only screen and (max-width: 575px) {
   .landscape {
     display: block; } }
+.bigFont {
+  font-size: 1.3em; }
 
 /*# sourceMappingURL=style.css.map */
