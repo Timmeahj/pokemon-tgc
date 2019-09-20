@@ -83,6 +83,11 @@
 	margin-bottom: 80px;
 }
 
+#pc-card-choice > img, #player-card-choice > img{
+	position: absolute;
+	transition: 0.5s;
+}
+
 #pc-card-choice, #player-card-choice{
 	border: 0px solid black;
 }
@@ -107,4 +112,8 @@
 	background: white;
 	color: black;
 	cursor: pointer;
+}
+
+#versus{
+	margin-bottom: 122px;
 }

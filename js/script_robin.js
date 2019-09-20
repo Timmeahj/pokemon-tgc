@@ -91,24 +91,10 @@ allCards(function () {
             document.getElementById("humanStats").classList.remove("gone");
             document.getElementById("pcStats").classList.remove("gone");
 
-            if(this === humanHand[0]){
-                index = 0;
-            }
-
-            if(this === humanHand[1]){
-                index = 1;
-            }
-
-            if(this === humanHand[2]){
-                index = 2;
-            }
-        
-            if(this === humanHand[3]){
-                index = 3;
-            }
-
-            if(this === humanHand[4]){
-                index = 4;
+            for(var i = 0; i < handSize; i++){
+                if(this === humanHand[i]){
+                    index = i;
+                }
             }
 
             attackOne = humanCards[index].card.attacks[0].damage.replace(/[^0-9]/g,'');
@@ -170,7 +156,7 @@ allCards(function () {
                 pcAttackTwo = 0;
             }
             else{
-                pcAttackTwo = pcAttackTwo.damage.replace(/[^0-9]/g,'');
+                pcAttackTwo = parseInt(pcAttackTwo.damage.replace(/[^0-9]/g,''));
             }
 
             if (pcAttackOne < pcAttackTwo){
@@ -206,6 +192,10 @@ allCards(function () {
 
 
             function computerAttack () {
+                document.getElementById("pc-card-choice-img").style.right = "150px";
+                setTimeout(function(){ 
+                    document.getElementById("pc-card-choice-img").style.right = "0px"; 
+                }, 500);
                 hp = hp-pcAttack;
                 playerHp = playerHp-pcAttack;
                 if(humanCards[index].card.weaknesses != undefined){
@@ -247,6 +237,10 @@ allCards(function () {
 
 
             function humanAttack () {
+                document.getElementById("player-card-choice-img").style.left = "150px";
+                setTimeout(function(){ 
+                    document.getElementById("player-card-choice-img").style.left = "0px"; 
+                }, 500);
                 pcHp = pcHp-attack;
                 enemyHp = enemyHp-attack;
                 if(pcCard.card.weaknesses != undefined){
@@ -297,7 +291,7 @@ allCards(function () {
                             pcAttackTwo = 0;
                         }
                         else{
-                            pcAttackTwo = pcAttackTwo.damage.replace(/[^0-9]/g,'');
+                            pcAttackTwo = parseInt(pcAttackTwo.damage.replace(/[^0-9]/g,''));
                         }
 
                         if (pcAttackOne < pcAttackTwo){

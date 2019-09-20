@@ -63,6 +63,10 @@
   margin-top: 80px;
   margin-bottom: 80px; }
 
+#pc-card-choice > img, #player-card-choice > img {
+  position: absolute;
+  transition: 0.5s; }
+
 #pc-card-choice, #player-card-choice {
   border: 0px solid black; }
 
@@ -85,6 +89,9 @@
   background: white;
   color: black;
   cursor: pointer; }
+
+#versus {
+  margin-bottom: 122px; }
 
 /* Robin scss */
 #endScreen {
@@ -219,7 +226,7 @@ p {
   margin-bottom: 5px; }
 
 #player-card-choice, #pc-card-choice {
-  background: rgba(0, 0, 0, 0) !important; }
+  background: transparent !important; }
 
 .card-deck {
   display: flex;
