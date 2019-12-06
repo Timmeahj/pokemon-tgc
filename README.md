@@ -1,4 +1,4 @@
-[Pokémon Trading Card Game](https://timmeahj.github.io/pokemon-tgc/index.html "Launch Pokémon trading card game.")
+[Pokémon Trading Card Game](https://timmeahj.github.io/pokemon_game/index.html "Launch Pokémon trading card game.")
 
 --Tim: "This game was a really fun group project and I would love to go back at it again when I find the time because a lot of the code is still a bit sloppy since we were in the early stages of javascript at the time. However I am really pleased with the result since we only had 2 months of javascript finished when we made this game."
 
